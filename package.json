@@ -8,36 +8,24 @@
   ],
   "license": "MIT",
   "repository": "expressjs/csurf",
-  "dependencies": {
-    "cookie": "0.4.0",
-    "cookie-signature": "1.0.6",
-    "csrf": "3.1.0",
-    "http-errors": "~1.7.3"
-  },
-  "devDependencies": {
-    "body-parser": "1.19.0",
-    "connect": "3.7.0",
-    "cookie-parser": "1.4.4",
-    "cookie-session": "1.4.0",
-    "eslint": "6.8.0",
-    "eslint-config-standard": "14.1.0",
-    "eslint-plugin-import": "2.20.0",
-    "eslint-plugin-markdown": "1.0.1",
-    "eslint-plugin-node": "11.0.0",
-    "eslint-plugin-promise": "4.2.1",
-    "eslint-plugin-standard": "4.0.1",
-    "mocha": "7.0.0",
-    "nyc": "15.0.0",
-    "supertest": "4.0.2"
-  },
   "engines": {
     "node": ">= 0.8.0"
   },
+  "dependencies": {
+    "cookie": "^1.1.1",
+    "cookie-signature": "^1.2.2",
+    "csrf": "^3.1.0",
+    "http-errors": "^2.0.1"
+  },
+  "devDependencies": {
+    "body-parser": "^2.2.2",
+    "connect": "^3.7.0",
+    "cookie-parser": "^1.4.7",
+    "cookie-session": "^2.1.1",
+    "supertest": "^7.2.2"
+  },
   "scripts": {
-    "lint": "eslint --plugin markdown --ext js,md .",
-    "test": "mocha --check-leaks --reporter spec --bail test/",
-    "test-cov": "nyc --reporter=html --reporter=text npm test",
-    "test-travis": "nyc --reporter=text npm test"
+    "test": "node --test test/test.js"
   },
   "files": [
     "HISTORY.md",

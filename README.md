@@ -1,13 +1,29 @@
-# csurf
+# Important Note
 
-[![NPM Version][npm-version-image]][npm-url]
-[![NPM Downloads][npm-downloads-image]][node-url]
-[![Build status][travis-image]][travis-url]
-[![Test coverage][coveralls-image]][coveralls-url]
+This project is forked from https://github.com/expressjs/csurf to update
+the dependencies, as the original project is archived and no longer maintained.
+Version for this fork will start with v2.0.0 to differentiate from original
+project.
+
+This forked project is not published on NPM registry. To install the package
+for this forked project, run:
+`npm install git@github.com:zionsg/csurf.git#v2.0.0` (not yet as still fixing
+the test).
+
+----------
+
+> [!CAUTION]
+> **This repository is archived and no longer actively maintained.**
+>
+> We are no longer accepting issues, feature requests, or pull requests.
+> For additional support or questions, please visit the [Express.js Discussions page](https://github.com/expressjs/express/discussions).
+
+# csurf
 
 Node.js [CSRF][wikipedia-csrf] protection middleware.
 
-Requires either a session middleware or [cookie-parser](https://www.npmjs.com/package/cookie-parser) to be initialized first.
+Requires either a session middleware or [cookie-parser](https://www.npmjs.com/package/cookie-parser)
+to be initialized first.
 
   * If you are setting the ["cookie" option](#cookie) to a non-`false` value,
     then you must use [cookie-parser](https://www.npmjs.com/package/cookie-parser)
@@ -30,8 +46,6 @@ $ npm install csurf
 ```
 
 ## API
-
-<!-- eslint-disable no-unused-vars -->
 
 ```js
 var csurf = require('csurf')
@@ -155,7 +169,7 @@ input field named `_csrf`:
 ```html
 <form action="/process" method="POST">
   <input type="hidden" name="_csrf" value="{{csrfToken}}">
-  
+
   Favorite color: <input type="text" name="favoriteColor">
   <button type="submit">Submit</button>
 </form>
@@ -215,8 +229,6 @@ renders the page (where `res.render` or `res.sendFile` is called in Express,
 for example).
 
 The following is an example for Express of a typical SPA response:
-
-<!-- eslint-disable no-undef -->
 
 ```js
 app.all('*', function (req, res) {
@@ -322,5 +334,5 @@ app.use(function (err, req, res, next) {
 [npm-downloads-image]: https://badgen.net/npm/dm/csurf
 [npm-url]: https://npmjs.org/package/csurf
 [npm-version-image]: https://badgen.net/npm/v/csurf
-[travis-image]: https://badgen.net/travis/expressjs/csurf/master
-[travis-url]: https://travis-ci.org/expressjs/csurf
+[github-actions-ci-image]: https://badgen.net/github/checks/expressjs/csurf/master?label=ci
+[github-actions-ci-url]: https://github.com/expressjs/csurf/actions/workflows/ci.yml

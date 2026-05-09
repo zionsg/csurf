@@ -1,16 +1,20 @@
+process.env.NODE_ENV = 'test';
 
-process.env.NODE_ENV = 'test'
+// Inbuilt modules in Node.js
+const { describe, it, test } = require('node:test');
+const asset = require('node:assert');
+const http = require('http');
+const querystring = require('node:querystring');
 
-var assert = require('assert')
-var connect = require('connect')
-var http = require('http')
-var session = require('cookie-session')
-var bodyParser = require('body-parser')
-var cookieParser = require('cookie-parser')
-var querystring = require('querystring')
-var request = require('supertest')
+// External modules
+const bodyParser = require('body-parser');
+const connect = require('connect');
+const cookieParser = require('cookie-parser');
+const session = require('cookie-session');
+const request = require('supertest');
 
-var csurf = require('..')
+// This module
+const csurf = require('../index.js');
 
 describe('csurf', function () {
   it('should work in req.body', function (done) {
